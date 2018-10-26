@@ -21,7 +21,7 @@ public class BeatBox {
     private static final String SOUNDS_FOLDER = "sample_sounds";
     private static final int MAX_SOUNDS = 5;
 
-    //assetmanager to access the assets we provided
+    //asset manager to access the assets we provided
     private AssetManager assetManager;
     //get the list of sohnds
     private List<Sound> sounds;
@@ -31,9 +31,9 @@ public class BeatBox {
     //create the constructor and get the assets
     public BeatBox(Context context) {
         assetManager = context.getAssets();
-        //sound pool (int1, int2, int3) - 1 the max sounds played 5 - if 6 oldest one muted
-        //2 the sound manager for independant volume settings - the same as games and music
-        //the quelity of the sample rate converter 0 = ingored
+        //sound pool (int1, int2, int3) - 1 the max sounds played 5 - if 6 oldest 1 muted
+        //2 the sound manager for independent volume settings - the same as games and music
+        //the quality of the sample rate converter 0 = ignored
         soundPool = new SoundPool(MAX_SOUNDS, AudioManager.STREAM_MUSIC, 0);
         loadSounds();
 
@@ -44,6 +44,7 @@ public class BeatBox {
         String[] soundNames;
 
         try {
+            //init our string array to a list of sounds taken from our asset folder by our asset manager
             soundNames = assetManager.list(SOUNDS_FOLDER);
             Log.d(TAG, "Found " + soundNames.length + " sounds");
 
@@ -61,7 +62,7 @@ public class BeatBox {
                 load(sound);
                 sounds.add(sound);
             } catch (Exception ex) {
-                Log.d(TAG, "NO LOAD KURE");
+                Log.d(TAG, "NOT loaded");
             }
         }
     }

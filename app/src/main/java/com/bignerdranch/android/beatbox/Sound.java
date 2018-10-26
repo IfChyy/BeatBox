@@ -2,16 +2,16 @@ package com.bignerdranch.android.beatbox;
 
 /**
  * Created by Ivo Georgiev(IfChyy)
- * Sound class responsibble for storing the asset sound path
+ * Sound class responsible for storing the asset sound path
  * and its name
- * to repreent to the usre
+ * to represent to the user
  */
 
 public class Sound {
 
     private String assetPath;
     private String name;
-    //integer istead of int to let sound be null value
+    //integer instead of int to let sound be null value
     private Integer soundId;
 
 
