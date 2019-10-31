@@ -2,5 +2,10 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/DragAndDraw" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Locatr" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/NerdLauncher" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/PhotoGallery" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Sunset" vcs="Git" />
   </component>
 </project>
